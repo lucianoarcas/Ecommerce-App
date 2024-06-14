@@ -1,9 +1,11 @@
-import { Image, Platform, KeyboardAvoidingView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Image, Platform, KeyboardAvoidingView, StyleSheet, Text, TextInput, View, Pressable, Button } from 'react-native'
 import React from 'react'
 import backimg from "../../assets/img/backimg.jpg"
 import logo from "../../assets/img/logo.jpg"
 
-const Login = () => {
+
+
+const Login = ({navigation, route}) => {
 
 
   return (
@@ -23,6 +25,13 @@ const Login = () => {
         <TextInput style={styles.input}/>
         <Text>Password</Text>
         <TextInput secureTextEntry={true} style={styles.input}/>
+        <Pressable style={styles.Pressable} onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.buttonText}>Login</Text>
+        </Pressable>
+
+        <Pressable style={styles.Pressable2} onPress={() => navigation.navigate('Forgotpass')}>
+          <Text style={styles.buttonText}>Forgot Password?</Text>
+        </Pressable>
       </View>
     </KeyboardAvoidingView>
   )
@@ -31,6 +40,25 @@ const Login = () => {
 export default Login
 
 const styles = StyleSheet.create({
+
+  Pressable2:{
+    marginTop:"12%",
+    color:"lightblue",
+    backgroundColor:"blue",
+    justifyContent:"center",
+    height:"12%",
+    borderRadius: 10,
+
+  },
+
+  Pressable:{
+    color:"lightblue",
+    backgroundColor:"blue",
+    justifyContent:"center",
+    height:"15%",
+    borderRadius: 10,
+
+    },
   container: {
     flex: 1,
   },
@@ -63,16 +91,23 @@ const styles = StyleSheet.create({
   formContainer:{
     alignSelf: "center",
     width: "80%",
-    backgroundColor: "grey",
+    backgroundColor: "F5FCFF",
     padding: 20,
     marginTop: 5,
   },
   input: {
     height: 40,
     borderColor: 'gray',
-    borderWidth: 1,
+    borderWidth: 2,
+    borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
     backgroundColor: 'white',
-  }
+  },
+
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 18,
+  },
 });

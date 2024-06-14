@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
@@ -14,39 +15,40 @@ const Stack = createNativeStackNavigator();
 const Navigator = () => {
   return (
     <NavigationContainer>
+      
+        <Stack.Navigator initialRouteName="Login">
 
-      <Stack.Navigator>
+          <Stack.Screen
+            name="Login"
+            component={Login}
+          />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+          />
 
-        <Stack.Screen
-          name="Forgotpass"
-          component={Forgotpass}
-        />
-        <Stack.Screen
-          name="Login"
-          component={Login}
-        />
+          <Stack.Screen
+            name="Signup"
+            component={Signup}
+          />
 
-        <Stack.Screen
-          name="Signup"
-          component={Signup}
-        />
+          <Stack.Screen
+            name="Forgotpass"
+            component={Forgotpass}
+          />
 
-        <Stack.Screen
-          name="Home"
-          component={Home}
-        />
-        <Stack.Screen
-          name="ItemListContainer"
-          component={ItemListContainer}
-        />
+          <Stack.Screen
+            name="ItemListContainer"
+            component={ItemListContainer}
+          />
 
-        <Stack.Screen
-          name="ItemDetail"
-          component={ItemDetail}
-        />
+          <Stack.Screen
+            name="ItemDetail"
+            component={ItemDetail}
+          />
 
-      </Stack.Navigator>
-    
+        </Stack.Navigator>
+     
     </NavigationContainer>
   )
 }

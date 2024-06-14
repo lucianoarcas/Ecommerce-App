@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Platform, Pressable } from 'react-native';
+import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView, Platform, Pressable } from 'react-native';
 
-const ForgotPassword = () => {
+const ForgotPassword = ({navigation}) => {
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -12,13 +12,17 @@ const ForgotPassword = () => {
       </View>
 
       <View style={styles.formContainer}>
-        <Text>Email</Text>
+        <Text style={styles.text}>Email</Text>
         <TextInput
           placeholder='Enter your email'
           style={styles.input}
         />
         <Pressable style={styles.button}>
           <Text style={styles.buttonText}>Reset Password</Text>
+        </Pressable>
+
+        <Pressable style={styles.button2} onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.buttonText}>Back to Login</Text>
         </Pressable>
       </View>
     </KeyboardAvoidingView>
@@ -28,32 +32,46 @@ const ForgotPassword = () => {
 export default ForgotPassword
 
 const styles = StyleSheet.create({
+ 
+
+  button2:{
+    marginTop:"20%",
+    backgroundColor: 'grey',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 5,
+    width:"40%",
+
+  },  
+
+  text:{
+    fontSize:25,
+    marginVertical:"10%",
+  },
+
   container: {
     flex: 1,
     backgroundColor: '#F5FCFF',
   },
   header: {
-    height: "30%",
+    height: "20%",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "blue",
+    backgroundColor: "#F5FCFF",
   },
   title: {
-    fontSize: 25,
+    fontSize: 30,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
   },
   formContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    width: "80%",
+    alignItems: "start",
+    justifyContent: "start",
+    width: "85%",
     alignSelf: "center",
-    backgroundColor: "grey",
-    padding: 20,
-    marginTop: 20,
-    borderRadius: 10,
-  },
+    paddingHorizontal:"5%",
+    },
   input: {
     height: 40,
     borderColor: 'gray',
