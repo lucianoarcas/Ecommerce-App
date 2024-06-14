@@ -29,6 +29,10 @@ const Login = ({navigation, route}) => {
           <Text style={styles.buttonText}>Login</Text>
         </Pressable>
 
+        <Pressable style={styles.Pressable2} onPress={() => navigation.navigate('Signup')}>
+          <Text style={styles.buttonText}>Sign Up</Text>
+        </Pressable>
+
         <Pressable style={styles.Pressable2} onPress={() => navigation.navigate('Forgotpass')}>
           <Text style={styles.buttonText}>Forgot Password?</Text>
         </Pressable>
@@ -42,11 +46,11 @@ export default Login
 const styles = StyleSheet.create({
 
   Pressable2:{
-    marginTop:"12%",
+    marginTop:"10%",
     color:"lightblue",
     backgroundColor:"blue",
     justifyContent:"center",
-    height:"12%",
+    height:"10%",
     borderRadius: 10,
 
   },
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
     color:"lightblue",
     backgroundColor:"blue",
     justifyContent:"center",
-    height:"15%",
+    height:"10%",
     borderRadius: 10,
 
     },
@@ -93,7 +97,7 @@ const styles = StyleSheet.create({
     width: "80%",
     backgroundColor: "F5FCFF",
     padding: 20,
-    marginTop: 5,
+    marginBottom: 200,
   },
   input: {
     height: 40,

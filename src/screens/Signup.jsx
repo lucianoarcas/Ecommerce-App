@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView, Platform, Pressable } from 'react-native';
 
-const Register = () => {
+const Register = ({navigation}) => {
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -35,7 +35,7 @@ const Register = () => {
           <Text style={styles.buttonText}>Register</Text>
         </Pressable>
 
-        <Pressable style={styles.button2}>
+        <Pressable style={styles.button2} onPress={()=> {navigation.navigate('Login')}}>
           <Text style={styles.buttonText}>Back to Login</Text>
         </Pressable>
       </View>
