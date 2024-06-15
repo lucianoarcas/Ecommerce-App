@@ -47,8 +47,7 @@ const styles = StyleSheet.create({
 
   Pressable2:{
     marginTop:"10%",
-    color:"lightblue",
-    backgroundColor:"blue",
+    backgroundColor:"grey",
     justifyContent:"center",
     height:"10%",
     borderRadius: 10,
@@ -56,8 +55,8 @@ const styles = StyleSheet.create({
   },
 
   Pressable:{
-    color:"lightblue",
-    backgroundColor:"blue",
+    color:"grey",
+    backgroundColor:"grey",
     justifyContent:"center",
     height:"10%",
     borderRadius: 10,
@@ -65,9 +64,9 @@ const styles = StyleSheet.create({
     },
   container: {
     flex: 1,
+    backgroundColor:"black",
   },
   pictures:{
-    backgroundColor: "blue",
     justifyContent: "flex-start",
     height: "30%",
   },  
@@ -76,6 +75,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 20,
+    color: "goldenrod",
   },
   backimg: {
     position: "absolute",
@@ -90,18 +90,20 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     marginTop: -40,
     marginBottom: 10,
+    borderWidth: 2.5,
     borderRadius: 80,
+    borderColor:"goldenrod",
   },
   formContainer:{
     alignSelf: "center",
     width: "80%",
-    backgroundColor: "F5FCFF",
+    backgroundColor: "black",
     padding: 20,
     marginBottom: 200,
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: 'goldenrod',
     borderWidth: 2,
     borderRadius: 5,
     marginBottom: 10,
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: 'white',
+    color: 'black',
     textAlign: 'center',
     fontSize: 18,
   },

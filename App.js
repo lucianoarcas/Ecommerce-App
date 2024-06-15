@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
+import {useState, useCallback } from "react";
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet,  Text, View } from 'react-native';
 import Navigator from './Navigator';
 
 export default function App() {

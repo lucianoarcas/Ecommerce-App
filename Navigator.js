@@ -7,8 +7,9 @@ import Login from './src/screens/Login';
 import Signup from "./src/screens/Signup";
 import Home from "./src/screens/Home";
 import Forgotpass from './src/screens/Forgotpass';
-import ItemListContainer from "./src/screens/ItemListContainer";
+import ItemListCategory from "./src/screens/ItemListCategory";
 import ItemDetail from "./src/screens/ItemDetail";
+import ProductItem from './src/componentes/ProductItem';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,8 +39,8 @@ const Navigator = () => {
           />
 
           <Stack.Screen
-            name="ItemListContainer"
-            component={ItemListContainer}
+            name="ItemListCategory"
+            component={ItemListCategory}
           />
 
           <Stack.Screen

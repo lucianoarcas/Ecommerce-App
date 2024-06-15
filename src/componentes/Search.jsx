@@ -6,7 +6,7 @@ import { FontAwesome6 } from "@expo/vector-icons";
 
 
 
-const Search = ({ onSearch = () => {}, error = ''}) => {
+const Search = ({ onSearch = () => {}, error = '', goBack = () => {}} ) => {
 
 const [keyword, setKeyword] = useState("");
 
@@ -39,6 +39,7 @@ export default Search
 const styles = StyleSheet.create({
 
     container: {
+       
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -56,12 +57,11 @@ const styles = StyleSheet.create({
         padding: 8,
         fontSize: 18,
         backgroundColor: "grey",
-        color: "grey",
+        color: "black",
         borderRadius: 10,
       },
       errorText: {
-        color: "black",
-        fontSize: 16,
-        fontFamily: "Josefin",
+        color: "red",
+        fontSize: 18,
       },
 })
