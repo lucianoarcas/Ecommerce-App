@@ -6,60 +6,60 @@ const ProductItem = ({product, navigation}) => {
   return (
     <Card style={styles.additionalStylesCard}>
       <Pressable
-      style={styles.Pressable}
-      onPress={()=> navigation.navigate('ItemDetail', {productoId: product.id})}>
+        style={styles.pressable}
+        onPress={() => navigation.navigate('ItemDetail', { productId: product.id })}
+      >
         <View style={styles.details}>
-            <Text style={styles.textCategory}>{product.title}</Text>
-            
+          <Text style={styles.textCategory}>{product.title}</Text>
         </View>
 
         <Image
-        resizeMode="cover"
-        style={styles.image}
-        source={{ uri: product.thumbnail}}
+          resizeMode="cover"
+          style={styles.image}
+          source={{ uri: product.thumbnail }}
         />
       </Pressable>
     </Card>
-  )
-}
+  );
+};
 
-export default ProductItem
+export default ProductItem;
 
 const styles = StyleSheet.create({
-
-    details:{
-        backgroundColor:"lightblue",
-        width:"66%"
-    },  
-
-    image: {
-        width: "33%",
-        borderRadius: 8,
-        
-      },
-      additionalStylesCard: {
-        backgroundColor:"grey",
-        height: 120,
-        width: 300,
-        margin: 10,
-        paddingHorizontal: 0,
-        justifyContent: "space-between",
-        flexDirection: "row",
-      },
-      textCategory: {
-        color: "goldenrod",
-        width: '100%',
-
-      },
-
-      Pressable:{
-        flexDirection:"row",
-        justifyContent:"space-between",
-        backgroundColor:"blue",
-        width:300,
-        height:120,
-        paddingHorizontal:5,
-        paddingVertical:5,
-      }
-
-})
+  additionalStylesCard: {
+    backgroundColor: 'black', // Fondo principal en negro
+    height: 120,
+    width: '100%',
+    margin: 10,
+    paddingHorizontal: 0,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    borderRadius: 8,
+  },
+  pressable: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'black', // Fondo de área presionable en negro
+    width: '100%',
+    height: 120,
+    paddingHorizontal: 5,
+    paddingVertical: 5,
+  },
+  details: {
+    backgroundColor: 'goldenrod', // Fondo del contenedor de detalles en goldenrod
+    width: '65%',
+    justifyContent: 'center',
+    paddingHorizontal: 10,
+    borderRadius: 8,
+  },
+  image: {
+    width: '32%',
+    borderRadius: 8,
+  },
+  textCategory: {
+    color: 'black', // Texto en color negro para contrastar con fondo goldenrod
+    fontSize: 16,
+    fontWeight: 'bold',
+    width: '100%',
+  },
+});

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView, Platform, Pressable } from 'react-native';
 
-const Register = ({navigation}) => {
+const Signup = ({navigation}) => {
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -43,7 +43,7 @@ const Register = ({navigation}) => {
   )
 }
 
-export default Register
+export default Signup
 
 const styles = StyleSheet.create({
   button2: {

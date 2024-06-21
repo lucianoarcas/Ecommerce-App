@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView, Platform, Pressable } from 'react-native';
 
-const ForgotPassword = ({navigation}) => {
+const ForgotPass = ({navigation}) => {
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -29,7 +29,7 @@ const ForgotPassword = ({navigation}) => {
   )
 }
 
-export default ForgotPassword
+export default ForgotPass
 
 const styles = StyleSheet.create({
  

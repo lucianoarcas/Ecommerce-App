@@ -7,8 +7,7 @@ import categories from "../data/categories.json"
 
 const Home = ({navigation, route}) => {
   return (
-    <View style={styles.container}>
-      <Text>Home</Text>
+
       
       <View style={styles.flatListContainer}>
         <FlatList
@@ -18,7 +17,6 @@ const Home = ({navigation, route}) => {
             <CategoryItem category={item} navigation={navigation} />
           )}
         />
-      </View>
     </View>
   )
 }
@@ -26,11 +24,6 @@ const Home = ({navigation, route}) => {
 export default Home
 
 const styles = StyleSheet.create({
-
-  container: {
-    flex:1,
-    backgroundColor: '#F5FCFF',
-  },
 
   flatListContainer: {
     width: "100%",

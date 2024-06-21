@@ -3,6 +3,7 @@ import { StyleSheet, Text, TextInput, Pressable, View } from 'react-native'
 import {useState} from 'react'
 import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome6 } from "@expo/vector-icons";
+import { Entypo } from '@expo/vector-icons';
 
 
 
@@ -25,11 +26,15 @@ const [keyword, setKeyword] = useState("");
       </View>
 
       <Pressable onPress={() => onSearch(keyword)}>
-        <FontAwesome5 name="search" size={24} color="black" />
+        <FontAwesome5 name="search" size={24} color="goldenrod" />
       </Pressable>
       <Pressable onPress={() => setKeyword("")}>
-        <FontAwesome6 name="eraser" size={24} color="black" />
+        <FontAwesome6 name="eraser" size={24} color="goldenrod" />
       </Pressable>
+      <Pressable onPress={goBack}>
+        <Entypo name="back" size={24} color="goldenrod" />
+      </Pressable>
+
     </View>
   )
 }
@@ -38,30 +43,37 @@ export default Search
 
 const styles = StyleSheet.create({
 
-    container: {
-       
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 15,
-      },
-      inputContainer: {
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "start",
-        gap: 4,
-        width: "65%",
-      },
-      input: {
-        width: 250,
-        padding: 8,
-        fontSize: 18,
-        backgroundColor: "grey",
-        color: "black",
-        borderRadius: 10,
-      },
-      errorText: {
-        color: "red",
-        fontSize: 18,
-      },
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 15,
+    backgroundColor: 'black', // Fondo principal en negro para paleta oscura
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  inputContainer: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'start',
+    gap: 4,
+    width: '65%',
+  },
+  input: {
+    width: '100%',
+    padding: 10,
+    fontSize: 18,
+    backgroundColor: 'grey', // Fondo del input en gris oscuro
+    color: 'black', // Color del texto en negro para contraste
+    borderRadius: 10,
+  },
+  errorText: {
+    color: 'red', // Color del texto de error en rojo
+    fontSize: 18,
+    marginTop: 4,
+  },
+  iconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 })

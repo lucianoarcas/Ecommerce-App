@@ -1,11 +1,11 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React, {useEffect, useState} from 'react'
-import products from "../data/products.json"
 import Search from '../componentes/Search'
 import ProductItem from '../componentes/ProductItem'
 
-const ItemListCategory= ({navigation, route}) => {
+import products from "../data/products.json"
 
+const ItemListCategory= ({navigation, route}) => {
 
   const [keyWord, setKeyword] = useState('')
   const [productsFiltered, setProductsFiltered] = useState([])
@@ -35,6 +35,8 @@ const ItemListCategory= ({navigation, route}) => {
       (product) => product.category === categorySelected
     );
 
+    console.log(productsPreFiltered)
+
     const productsFilter = productsPreFiltered.filter((product) =>
       product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase())
     );
@@ -43,7 +45,7 @@ const ItemListCategory= ({navigation, route}) => {
   }, [keyWord, categorySelected])
 
   return (
-    <View style={styles.flatListContainer}>
+    <View style={styles.container}>
       <Search
         error={error}
         onSearch={setKeyword}
@@ -51,8 +53,9 @@ const ItemListCategory= ({navigation, route}) => {
       />
       <FlatList
         data={productsFiltered}
-        renderItem={({item}) => <ProductItem product = {item} navigation={navigation} />}
-        keyExtractor={(producto) => producto.id} />
+        keyExtractor={(products) => products.id} 
+        renderItem={({item}) => <ProductItem product= {item} navigation={navigation} />}
+        />
     </View>
   )
 }
@@ -61,14 +64,11 @@ export default ItemListCategory
 
 const styles = StyleSheet.create({
 
-    flatListContainer: {
-      width: "100%",
-      backgroundColor: "grey",
-      flex:1,
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      padding: 10,
+
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+    padding: 10,
   },
 
 })

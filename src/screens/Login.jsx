@@ -1,17 +1,32 @@
 import { Image, Platform, KeyboardAvoidingView, StyleSheet, Text, TextInput, View, Pressable, Button } from 'react-native'
-import React from 'react'
+import {useState} from 'react'
 import backimg from "../../assets/img/backimg.jpg"
 import logo from "../../assets/img/logo.jpg"
-
+import { AuthContext } from '../authContext/Auth'
+import { useContext } from 'react'
 
 
 const Login = ({navigation, route}) => {
 
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const { login } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    const success = login(user, password);
+    if (success) {
+      {navigation.navigate('Home')};
+    } else {
+      setError('Invalid email or password');
+    }
+  };
 
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      behavior={Platform.OS === "android" ? "padding" : "height"}
     >
       <View style={styles.pictures}>
         <Image style={styles.backimg} source={backimg}/>
@@ -21,11 +36,18 @@ const Login = ({navigation, route}) => {
 
       <View style={styles.formContainer}>
         <Text style={ styles.SignIn }>Sign In</Text>
-        <Text>Email</Text>
-        <TextInput style={styles.input}/>
+        <Text>User</Text>
+        <TextInput style={styles.input}
+          value={user}
+          onChangeText={setUser}
+          autoCapitalize="none"
+        />
         <Text>Password</Text>
-        <TextInput secureTextEntry={true} style={styles.input}/>
-        <Pressable style={styles.Pressable} onPress={() => navigation.navigate('Home')}>
+        <TextInput secureTextEntry={true} style={styles.input}
+          value={password}
+          onChangeText={setPassword}
+        />
+        <Pressable style={styles.Pressable} onPress={ handleLogin }>
           <Text style={styles.buttonText}>Login</Text>
         </Pressable>
 
@@ -36,6 +58,8 @@ const Login = ({navigation, route}) => {
         <Pressable style={styles.Pressable2} onPress={() => navigation.navigate('Forgotpass')}>
           <Text style={styles.buttonText}>Forgot Password?</Text>
         </Pressable>
+
+        {error ? <Text style={styles.error}>{error}</Text> : null}
       </View>
     </KeyboardAvoidingView>
   )
@@ -116,4 +140,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
   },
-});
+})
