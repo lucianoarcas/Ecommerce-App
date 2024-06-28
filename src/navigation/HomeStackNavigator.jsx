@@ -18,7 +18,7 @@ const HomeStackNavigator = () => {
         screenOptions={{headerShown: false}}>
 
           <Stack.Screen
-            name="Home"
+            name="Categories"
             component={Home}
             
           />

@@ -4,11 +4,10 @@ import Card from './Card'
 
 const CategoryItem = ({category, navigation}) => {
   return (
-    <Card style={styles.cardContainer}>
-        <Pressable style={styles.Pressable} onPress={()=> navigation.navigate('ItemListCategory', {category})} >
+    <Pressable style={styles.Pressable} onPress={()=> navigation.navigate('ItemListCategory', {category})} >
+        
             <Text style={styles.text} > {category} </Text>
-        </Pressable>
-    </Card>
+    </Pressable>
   )
 }
 
@@ -18,17 +17,18 @@ const styles = StyleSheet.create({
 
     Pressable:{
         color:"black",
+        margin:"2.5%",
+        height:150,
+        width:"45%",
+        backgroundColor:"goldenrod",
+        borderRadius:10,
+        justifyContent:"center",
     },
 
-    cardContainer: {
-        marginHorizontal: 10, 
-        marginVertical: 10,
-        backgroundColor:"black",
-        color:"goldenrod",
-    }, 
     text: {
-        fontSize: 24,
+        fontSize: 20,
         textAlign: 'center',
-        color: "goldenrod",
+        color: "black",
+        fontWeight:"bold",
     }
 })

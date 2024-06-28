@@ -6,21 +6,16 @@ import Navigator from './src/navigation/Navigator';
 import { Entypo } from '@expo/vector-icons';
 import { AuthProvider } from './src/authContext/Auth';
 
+import { Provider } from 'react-redux';
+import store from './src/store';
 export default function App() {
   return (
     
     <AuthProvider>
-      <Navigator />
+      <Provider store={store}>
+        <Navigator />
+      </Provider>
     </AuthProvider>
     
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 
 import allProducts from "../data/products.json"
 import Counter from '../componentes/Counter';
+import { reset } from '../features/CounterSlice';
 
 const ItemDetail = ({navigation, route}) => {
 
@@ -34,8 +35,8 @@ const ItemDetail = ({navigation, route}) => {
             <Text style={styles.text} >{product.description}</Text>
             <Text style={styles.price}>${product.price}</Text>
           </View>
-          <Counter/>
-          <Pressable style={styles.button} onPress={() => navigation.goBack()}>
+          <Counter product={product}/>
+          <Pressable style={styles.button} onPress={() => navigation.goBack() && {reset}}>
             <Text>BACK</Text>
           </Pressable>
         </View>

@@ -28,7 +28,7 @@ const TabNavigator = () => {
         component={CartStackNavigator}
         options={{ tabBarIcon: ({ focused })=> {
             return (
-                <Entypo name="home" size={24} color={focused ? "black" : "grey"} />
+                <Entypo name="shopping-cart" size={24} color={focused ? "black" : "grey"} />
             )
         }}}>
 
@@ -39,7 +39,7 @@ const TabNavigator = () => {
         component={ProfileStackNavigator}
         options={{ tabBarIcon: ({ focused })=> {
             return (
-                <Entypo name="home" size={24} color={focused ? "black" : "grey"} />
+                <Entypo name="text-document" size={24} color={focused ? "black" : "grey"}  />
             )
         }}}>
 

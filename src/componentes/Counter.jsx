@@ -1,51 +1,49 @@
-import { StyleSheet, Text, View, Pressable, TextInput } from 'react-native'
-import {useState} from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { StyleSheet, Text, View, Image, Pressable, Button } from 'react-native'
+import { increment, decrement, reset } from '../features/CounterSlice'; // Importa las acciones de counterSlice
+import { addToCart } from "../features/CartSlice"; // Importa la acción de cartSlice
 
-const Counter = () => {
+const Counter = ({ product }) => { // Recibe el producto como prop
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
-    const [inputToAdd, setInputToAdd] = useState(null);
-  
-    let count = 0
-  
-    console.log(count);
-  
-    return (
-    <View style={styles.container}>
-        <View style={styles.buttonsContainer1}>
-          <Pressable
-            style={styles.button}
-            onPress={() => console.log("Decrement")}
-          >
-            <Text style={styles.buttonText}>-</Text>
-          </Pressable>
-          <Text style={styles.span}>{count}</Text>
-          <Pressable
-            style={styles.button}
-            onPress={() => console.log("Increment")}
-          >
-            <Text style={styles.buttonText}>+</Text>
-          </Pressable>
-        </View>
-        <View style={styles.buttonsContainer2}>
-          <TextInput
-            placeholder="Cantidad a aumentar"
-            style={styles.spanInput}
-            onChangeText={setInputToAdd}
-            value={inputToAdd}
-          />
-          <Pressable
-            style={styles.button}
-            onPress={() => console.log('Incremento por cantidad')}
-          >
-            <Text style={styles.buttonText}>Add</Text>
-          </Pressable>
-        </View>
-        {/* <Pressable style={styles.button} onPress={() => console.log("Borrar")}>
-          <Text style={styles.buttonText}>Reset</Text>
-        </Pressable> */}
-    </View>
-    );
+  const addItemToCart = () => {
+    const item = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      quantity: count
+    };
+    dispatch(addToCart(item));
+    dispatch(reset());
   };
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.buttonsContainer1}>
+        <Pressable
+          style={styles.button}
+          onPress={() => dispatch(decrement())}
+        >
+          <Text style={styles.buttonText}>-</Text>
+        </Pressable>
+        <Text style={styles.span}>{count}</Text>
+        <Pressable
+          style={styles.button}
+          onPress={() => dispatch(increment())}
+        >
+          <Text style={styles.buttonText}>+</Text>
+        </Pressable>
+      </View>
+      <Pressable
+        style={styles.button}
+        onPress={addItemToCart}
+      >
+        <Text style={styles.buttonText}>Add</Text>
+      </Pressable>
+    </View>
+  );
+};
 
 export default Counter
 

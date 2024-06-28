@@ -1,0 +1,362 @@
+[
+    {
+        "id": 1, 
+        "category": "vinos",
+        "title": "Vino Tinto Malbec",
+        "description": "Vino tinto de uva Malbec, cosecha 2020",
+        "price": 1200, 
+        "stock": 50,
+        "image": ""
+    },
+    {
+        "id": 2,
+        "category": "vinos", 
+        "title": "Vino Blanco Chardonnay", 
+        "description": "Vino blanco de uva Chardonnay, cosecha 2021", 
+        "price": 950, 
+        "stock": 30, 
+        "image": ""
+    },
+    {
+        "id": 3,
+        "category": "vinos",
+        "title": "Vino Rosado Syrah",
+        "description": "Vino rosado de uva Syrah, cosecha 2021",
+        "price": 800,
+        "stock": 20,
+        "image": ""
+    },
+    {
+        "id": 4,
+        "category": "vinos",
+        "title": "Vino Espumante Brut",
+        "description": "Vino espumante Brut, método tradicional",
+        "price": 1500,
+        "stock": 25,
+        "image": ""
+    },
+    {
+        "id": 5,
+        "category": "vinos",
+        "title": "Vino Tinto Cabernet Sauvignon",
+        "description": "Vino tinto de uva Cabernet Sauvignon, cosecha 2019",
+        "price": 1300,
+        "stock": 40,
+        "image": ""
+    },
+    {
+        "id": 6,
+        "category": "vinos",
+        "title": "Vino Blanco Sauvignon Blanc",
+        "description": "Vino blanco de uva Sauvignon Blanc, cosecha 2021",
+        "price": 1000,
+        "stock": 35,
+        "image": ""
+    },
+    {
+        "id": 7,
+        "category": "vinos",
+        "title": "Vino Rosado Pinot Noir",
+        "description": "Vino rosado de uva Pinot Noir, cosecha 2021",
+        "price": 850,
+        "stock": 20,
+        "image": ""
+    },
+    {
+        "id": 8,
+        "category": "vinos",
+        "title": "Vino Espumante Extra Brut",
+        "description": "Vino espumante Extra Brut, método tradicional",
+        "price": 1600,
+        "stock": 15,
+        "image": ""
+    },
+    {
+        "id": 9,
+        "category": "vinos",
+        "title": "Vino Tinto Merlot",
+        "description": "Vino tinto de uva Merlot, cosecha 2020",
+        "price": 1100,
+        "stock": 45,
+        "image": ""
+    },
+    {
+        "id": 10,
+        "category": "vinos",
+        "title": "Vino Blanco Torrontés",
+        "description": "Vino blanco de uva Torrontés, cosecha 2021",
+        "price": 900,
+        "stock": 25,
+        "image": ""
+    },
+    {
+        "id": 11,
+        "category": "vinos",
+        "title": "Vino Rosado Garnacha",
+        "description": "Vino rosado de uva Garnacha, cosecha 2021",
+        "price": 700,
+        "stock": 10,
+        "image": ""
+    },
+    {
+        "id": 12,
+        "category": "vinos",
+        "title": "Vino Espumante Rosé",
+        "description": "Vino espumante Rosé, método tradicional",
+        "price": 1400,
+        "stock": 30,
+        "image": ""
+    },
+    {
+        "id": 13,
+        "category": "vinos",
+        "title": "Vino Tinto Syrah",
+        "description": "Vino tinto de uva Syrah, cosecha 2020",
+        "price": 1250,
+        "stock": 50,
+        "image": ""
+    },
+    {
+        "id": 14,
+        "category": "vinos",
+        "title": "Vino Blanco Riesling",
+        "description": "Vino blanco de uva Riesling, cosecha 2021",
+        "price": 1050,
+        "stock": 20,
+        "image": ""
+    },
+    {
+        "id": 15,
+        "category": "vinos",
+        "title": "Vino Rosado Malbec",
+        "description": "Vino rosado de uva Malbec, cosecha 2021",
+        "price": 750,
+        "stock": 10,
+        "image": ""
+    },
+    {
+        "id": 16,
+        "category": "vinos",
+        "title": "Vino Espumante Demi Sec",
+        "description": "Vino espumante Demi Sec, método tradicional",
+        "price": 1450,
+        "stock": 20,
+        "image": ""
+    },
+    {
+        "id": 17,
+        "category": "vinos",
+        "title": "Vino Tinto Tempranillo",
+        "description": "Vino tinto de uva Tempranillo, cosecha 2020",
+        "price": 1350,
+        "stock": 30,
+        "image": ""
+    },
+    {
+        "id": 18,
+        "category": "vinos",
+        "title": "Vino Blanco Viognier",
+        "description": "Vino blanco de uva Viognier, cosecha 2021",
+        "price": 970,
+        "stock": 25,
+        "image": ""
+    },
+    {
+        "id": 19,
+        "category": "vinos",
+        "title": "Vino Rosado Zinfandel",
+        "description": "Vino rosado de uva Zinfandel, cosecha 2021",
+        "price": 820,
+        "stock": 15,
+        "image": ""
+    },
+    {
+        "id": 20,
+        "category": "vinos",
+        "title": "Vino Espumante Nature",
+        "description": "Vino espumante Nature, método tradicional",
+        "price": 1650,
+        "stock": 18,
+        "image": ""
+    },
+    {
+        "id": 21,
+        "category": "destilados",
+        "title": "Whisky Escocés",
+        "description": "Whisky escocés añejado 12 años",
+        "price": 3500,
+        "stock": 25,
+        "image": ""
+    },
+    {
+        "id": 22,
+        "category": "destilados",
+        "title": "Vodka Premium",
+        "description": "Vodka premium destilado 5 veces",
+        "price": 2200,
+        "stock": 40,
+        "image": ""
+    },
+    {
+        "id": 23,
+        "category": "destilados",
+        "title": "Tequila Reposado",
+        "description": "Tequila reposado 100% agave",
+        "price": 3000,
+        "stock": 15,
+        "image": ""
+    },
+    {
+        "id": 24,
+        "category": "destilados",
+        "title": "Ron Añejo",
+        "description": "Ron añejo de 7 años",
+        "price": 1800,
+        "stock": 30,
+        "image": ""
+    },
+    {
+        "id": 25,
+        "category": "destilados",
+        "title": "Gin London Dry",
+        "description": "Gin London Dry, destilado con botánicos",
+        "price": 2500,
+        "stock": 20,
+        "image": ""
+    },
+    {
+        "id": 26,
+        "category": "destilados",
+        "title": "Whisky Bourbon",
+        "description": "Whisky Bourbon añejado 8 años",
+        "price": 4000,
+        "stock": 10,
+        "image": ""
+    },
+    {
+        "id": 27,
+        "category": "destilados",
+        "title": "Vodka Saborizado",
+        "description": "Vodka saborizado con frutas naturales",
+        "price": 2100,
+        "stock": 25,
+        "image": ""
+    },
+    {
+        "id": 28,
+        "category": "cervezas",
+        "title": "Cerveza Lager",
+        "description": "Cerveza Lager tradicional",
+        "price": 150,
+        "stock": 100,
+        "image": ""
+    },
+    {
+        "id": 29,
+        "category": "cervezas",
+        "title": "Cerveza IPA",
+        "description": "Cerveza IPA con alto amargor",
+        "price": 200,
+        "stock": 80,
+        "image": ""
+    },
+    {
+        "id": 30,
+        "category": "cervezas",
+        "title": "Cerveza Stout",
+        "description": "Cerveza Stout con notas de café",
+        "price": 180,
+        "stock": 70,
+        "image": ""
+    },
+    {
+        "id": 31,
+        "category": "cervezas",
+        "title": "Cerveza Pale Ale",
+        "description": "Cerveza Pale Ale de estilo inglés",
+        "price": 160,
+        "stock": 90,
+        "image": ""
+    },
+    {
+        "id": 32,
+        "category": "cervezas",
+        "title": "Cerveza Porter",
+        "description": "Cerveza Porter con notas de chocolate",
+        "price": 190,
+        "stock": 50,
+        "image": ""
+    },
+    {
+        "id": 33,
+        "category": "cervezas",
+        "title": "Cerveza Pilsner",
+        "description": "Cerveza Pilsner clara y refrescante",
+        "price": 140,
+        "stock": 110,
+        "image": ""
+    },
+    {
+        "id": 34,
+        "category": "cervezas",
+        "title": "Cerveza Belgian Ale",
+        "description": "Cerveza Belgian Ale con especias",
+        "price": 210,
+        "stock": 65,
+        "image": ""
+    },
+    {
+        "id": 35,
+        "category": "cervezas",
+        "title": "Cerveza Amber Ale",
+        "description": "Cerveza Amber Ale con maltas caramelo",
+        "price": 170,
+        "stock": 85,
+        "image": ""
+    },
+    {
+        "id": 36,
+        "category": "cervezas",
+        "title": "Cerveza Wheat Beer",
+        "description": "Cerveza Wheat Beer con trigo",
+        "price": 155,
+        "stock": 95,
+        "image": ""
+    },
+    {
+        "id": 37,
+        "category": "cervezas",
+        "title": "Cerveza Bock",
+        "description": "Cerveza Bock fuerte y maltosa",
+        "price": 200,
+        "stock": 75,
+        "image": ""
+    },
+    {
+        "id": 38,
+        "category": "aperitivos",
+        "title": "Aperitivo Vermut Rojo",
+        "description": "Aperitivo Vermut Rojo con hierbas",
+        "price": 900,
+        "stock": 40,
+        "image": ""
+    },
+    {
+        "id": 39,
+        "category": "aperitivos",
+        "title": "Aperitivo Vermut Blanco",
+        "description": "Aperitivo Vermut Blanco con hierbas",
+        "price": 850,
+        "stock": 30,
+        "image": ""
+    },
+    {
+        "id": 40,
+        "category": "aperitivos",
+        "title": "Aperitivo Bitter",
+        "description": "Aperitivo Bitter con un toque amargo",
+        "price": 950,
+        "stock": 35,
+        "image": ""
+    }
+]

@@ -13,6 +13,7 @@ const Home = ({navigation, route}) => {
         <FlatList
           keyExtractor={(category) => category}
           data={categories}
+          numColumns={2}
           renderItem={({item}) => (
             <CategoryItem category={item} navigation={navigation} />
           )}
@@ -27,9 +28,8 @@ const styles = StyleSheet.create({
 
   flatListContainer: {
     width: "100%",
-    backgroundColor: "grey",
-    flex:1,
-    flexDirection: "column",
+    backgroundColor: "black",
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     padding: 10,

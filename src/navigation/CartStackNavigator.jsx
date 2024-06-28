@@ -1,12 +1,24 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Cart from "../screens/Cart"
+
+
+const Stack = createNativeStackNavigator();
 
 const CartStackNavigator = () => {
   return (
-    <View>
-      <Text>CartStackNavigator</Text>
-    </View>
+
+   
+      <Stack.Navigator
+      screenOptions={{headerShown: false}}>
+
+        <Stack.Screen
+        name="Cart"
+        component={Cart}/>
+
+      </Stack.Navigator>
+   
   )
 }
 
