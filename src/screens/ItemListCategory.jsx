@@ -4,6 +4,7 @@ import Search from '../componentes/Search'
 import ProductItem from '../componentes/ProductItem'
 
 import products from "../data/products.json"
+import { useGetProductsByCategoryQuery } from '../../services/shopServices'
 
 const ItemListCategory= ({navigation, route}) => {
 
@@ -12,6 +13,8 @@ const ItemListCategory= ({navigation, route}) => {
   const [error, setError] = useState("")
 
   const { category: categorySelected } = route.params;
+
+const {data: productsFetched, isError, isLoading} = useGetProductsByCategoryQuery(categorySelected)
 
   useEffect(()=>{
     const regexDigits = /\d/;
@@ -30,19 +33,16 @@ const ItemListCategory= ({navigation, route}) => {
     }
 
     console.log(error)
+    if (!isLoading){
+      const productsFilter = productsFetched.filter((product) =>
+        product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase())
+      );
+      setProductsFiltered(productsFilter);
+      setError('')
 
-    const productsPreFiltered = products.filter(
-      (product) => product.category === categorySelected
-    );
-
-    console.log(productsPreFiltered)
-
-    const productsFilter = productsPreFiltered.filter((product) =>
-      product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase())
-    );
-    setProductsFiltered(productsFilter);
-    setError('')
-  }, [keyWord, categorySelected])
+      
+    }
+  }, [keyWord, categorySelected, productsFetched, isLoading])
 
   return (
     <View style={styles.container}>

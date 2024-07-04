@@ -2,10 +2,14 @@ import { StyleSheet, KeyboardAvoidingView, Text, View, FlatList } from 'react-na
 import React from 'react'
 import Search from '../componentes/Search'
 import CategoryItem from '../componentes/CategoryItem'
-import categories from "../data/categories.json"
+import { useGetCategoriesQuery } from '../../services/shopServices'
+
 
 
 const Home = ({navigation, route}) => {
+
+  const {data: categories} = useGetCategoriesQuery()
+  
   return (
 
       
@@ -27,6 +31,7 @@ export default Home
 const styles = StyleSheet.create({
 
   flatListContainer: {
+    height:"100%",
     width: "100%",
     backgroundColor: "black",
     flexDirection: "row",

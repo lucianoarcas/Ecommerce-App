@@ -1,28 +1,22 @@
 import { StyleSheet, Text, View, Image, Pressable, Button } from 'react-native'
 import {useState, useEffect} from 'react'
-
+import { Entypo } from '@expo/vector-icons';
 import allProducts from "../data/products.json"
 import Counter from '../componentes/Counter';
 import { reset } from '../features/CounterSlice';
+import { useGetProductByIdQuery } from '../../services/shopServices';
 
 const ItemDetail = ({navigation, route}) => {
 
-  const [product, setProduct] = useState(null);
-
   const {productId: idSelected} = route.params
 
-  useEffect(() => {
-    const productSelected = allProducts.find(
-      (product) => product.id === idSelected
-    );
+  const {data: product, isLoading, isError} = useGetProductByIdQuery(idSelected)
 
-    setProduct(productSelected);
-  }, [idSelected]);
-
-  console.log(product)
 
   return (
     <View style={styles.mainContainer}>
+
+
       {product ? (
         <View style={styles.imageContainer}>
           <Image

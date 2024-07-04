@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     Pressable:{
         color:"black",
         margin:"2.5%",
-        height:150,
+        height:200,
         width:"45%",
         backgroundColor:"goldenrod",
         borderRadius:10,

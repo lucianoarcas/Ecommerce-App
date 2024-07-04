@@ -6,7 +6,7 @@ import { AuthContext } from '../authContext/Auth'
 import { useContext } from 'react'
 
 
-const Login = ({navigation, route}) => {
+const Login = ({navigation}) => {
 
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
@@ -17,7 +17,7 @@ const Login = ({navigation, route}) => {
   const handleLogin = () => {
     const success = login(user, password);
     if (success) {
-      {navigation.navigate('Home')};
+      {navigation.navigate('Store')};
     } else {
       setError('Invalid email or password');
     }

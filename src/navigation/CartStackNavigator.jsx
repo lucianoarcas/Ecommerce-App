@@ -14,7 +14,7 @@ const CartStackNavigator = () => {
       screenOptions={{headerShown: false}}>
 
         <Stack.Screen
-        name="Cart"
+        name="Carrito"
         component={Cart}/>
 
       </Stack.Navigator>

@@ -20,7 +20,7 @@ const AuthStackScreen = () => (
 
   const AppStackScreen = () => (
     <AppStack.Navigator>
-      <AppStack.Screen name="Store" component={TabNavigator} options={{ headerShown: false }} />
+      <AppStack.Screen name="Initialpage" component={TabNavigator} options={{ headerShown: false }} />
     </AppStack.Navigator>
   );
 
